@@ -12,7 +12,7 @@ Setup:
 
 . Run Docker on your host machine
 . Create the docker image using Dockerfile (first time)
-	host> docker build . -t arm_build
+  host> docker build . -t arm_build
 
 . Run the docker image - mapping a host directory to /home/dev 
   host> docker run -v "$HOME/Docker/arm_build/dev/:/home/dev" --network host -i -t arm_build /bin/sh
