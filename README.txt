@@ -15,7 +15,7 @@ Setup:
   host> docker build . -t arm_build
 
 . Run the docker image - mapping a host directory to /home/dev 
-  host> docker run -v "$HOME/Docker/arm_build/dev/:/home/dev" --network host -i -t arm_build /bin/sh
+  host> docker run -v "$HOME/DockerPicoDev/dev/:/home/dev" --network host -i -t arm_build /bin/sh
 
 . From the running image shell - run the setup_and_build_pico.sh script
   img> sh setup_and_build_pico.sh
