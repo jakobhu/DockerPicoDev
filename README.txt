@@ -11,15 +11,15 @@ Requirements:
 Setup:
 
 . Run Docker on your host machine
+
 . Create the docker image using Dockerfile (first time)
+  Make sure the downloaded .bz2 toolchain file is next to the Dockerfile.
   host> docker build . -t arm_build
 
 . Run the docker image - mapping a host directory to /home/dev 
   host> docker run -v "$HOME/DockerPicoDev/dev/:/home/dev" --network host -i -t arm_build /bin/sh
 
-. From the running image shell - run the setup_and_build_pico.sh script
-  img> sh setup_and_build_pico.sh
+. From the container - run the setup_and_build_pico.sh script
+  img> sh -v setup_and_build_pico.sh
 
 . move the desired .uf2 binary to the pico using your host machine (drag and drop to the pico USB drive)
-
-
